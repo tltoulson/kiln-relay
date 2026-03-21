@@ -1,0 +1,12 @@
+{
+  "name": "kiln-relay",
+  "version": "1.0.0",
+  "description": "HTTP relay for Skutt kiln — logs locally and/or forwards to a configurable URL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
