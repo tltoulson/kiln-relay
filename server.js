@@ -6,10 +6,10 @@ const fs = require('fs');
 const { URL } = require('url');
 
 // --- Config ---
-const PORT = parseInt(process.env.PORT || '3000', 10);
+const PORT = parseInt(process.env.PORT || '80', 10);
 
 const LOG_ENABLED = process.env.LOG_ENABLED === 'true';
-const LOG_FILE = process.env.LOG_FILE || './kiln.log';
+const LOG_FILE = '/logs/kiln.log';
 
 const FORWARD_ENABLED = process.env.FORWARD_ENABLED === 'true';
 const FORWARD_URL = process.env.FORWARD_URL || '';

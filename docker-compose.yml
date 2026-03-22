@@ -3,10 +3,10 @@ services:
     build: .
     restart: unless-stopped
     ports:
-      - "${PORT:-3000}:${PORT:-3000}"
+      - "${PORT:-80}:${PORT:-80}"
     env_file:
       - .env
     volumes:
       # Mounts the log directory so logs persist outside the container.
-      # LOG_FILE in .env should be /logs/kiln.log when running in Docker.
-      - ./logs:/logs
+      # LOG_DIR in .env controls the host path; /logs is the container-side mount point.
+      - ${LOG_DIR:-./logs}:/logs
